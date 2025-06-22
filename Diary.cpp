@@ -13,7 +13,7 @@ void Diary::addEntry() {
     void Diary::showEntries() const; {
         std::cout << "\nDina anteckningar:\n";
         for (size_t i = 0; i < entries.size(); ++i) {
-            std::cout << i + 1 << ". " << entries[i] << '\n'; 
+            std::cout << i + 1 << ". " << entries[i] << '\n';
         }
         if (entries.empty()) {
             std::cout << "Inga anteckningar ännu.\n";
