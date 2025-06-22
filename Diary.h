@@ -5,11 +5,10 @@
 #include <vector>
 
 class Diary {
-    std::vector<std::string> entries;  // Lista med anteckningar
-
+    std::vector<std::string> entries;
 public:
     void addEntry();
-    void showEntries() const; // Ändra inget i anteckningarna
+    void showEntries() const;
 };
 
 #endif
