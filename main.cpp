@@ -1,28 +1,27 @@
-#include <vector>
 #include <iostream>
-#include <string>
-std:: vector <std::string> diaryNotes = {};
-
-void addNewDiaryNote() {
-    std::string note;
-    std::cout << "Skriv din dagboksanteckning: " << '\n';
-    std::getline(std::cin, note); // tar emot hela raden inkl. mellanslag
-    diaryNotes.push_back(note);   // lägg till anteckningen i vektorn
-    std::cout << "Anteckning sparad!\n";
-}
+#include "Diary.h"
 
 int main() {
-    int userInput;
-    std:: cout << "Vad vill du göra idag?" << '\n';
-    std::cout << "1. Skriva en ny dagboksanteckning" << '\n';
-    std::cout << "Välj: " ;
-    std::cin >> userInput;
-    if (userInput == 1) {
-        addNewDiaryNote();
-    }
+    Diary myDiary;   // Skapa en dagboksinstans
 
-return 0;
+    int choice;
+    do {
+        std::cout << "\nVad vill du göra?\n";
+        std::cout << "1. Skriv en ny anteckning\n";
+        std::cout << "2. Visa alla anteckningar\n";
+        std::cout << "0. Avsluta\n";
+        std::cout << "Välj: ";
+        std::cin >> choice;
+
+        if (choice == 1) {
+            myDiary.addEntry();
+        } else if (choice == 2) {
+            myDiary.showEntries();
+        } else if (choice != 0) {
+            std::cout << "Ogiltigt val, försök igen.\n";
+        }
+    } while (choice != 0);
+
+    std::cout << "Hejdå!\n";
+    return 0;
 }
-
-
-

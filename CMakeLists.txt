@@ -7,7 +7,9 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-add_executable(Dagny_Secure_Diary main.cpp)
+add_executable(Dagny_Secure_Diary main.cpp
+        Diary.cpp
+        Diary.h)
 ## Skapar en exekverbar fil (program) med namnet Dagny_Secure_Diary, och anger att main.cpp är källfilen som ska kompileras.
 
 target_compile_options(Dagny_Secure_Diary PRIVATE
