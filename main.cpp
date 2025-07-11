@@ -2,7 +2,7 @@
 #include "Diary.h"
 
 int main() {
-    Diary myDiary;   // Skapa en dagboksinstans
+    Diary myDiary;
 
     int choice;
     do {
