@@ -4,10 +4,13 @@
 #include <string>
 #include <vector>
 
+using namespace std; 
+
 class Diary {
-    std::vector<std::string> entries;
+    vector<string> entries;
 public:
     void addEntry();
+    void removeEntry();
     void showEntries() const;
 };
 
